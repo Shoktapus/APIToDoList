@@ -36,8 +36,8 @@ function ToDoList() {
         {store.tasks.map((item, index) => {
           return (
             <>
-              <div key={index}>{item}</div>
-              <button onClick={()=> remove(index)}>Delete</button>
+              <div key={index}>{item.label}</div>
+              <button onClick={()=> actions.deleteItem(index)}>Delete</button>
             </>
           );
         })}
